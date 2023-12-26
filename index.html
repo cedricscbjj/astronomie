@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@700&display=swap');
+    
+    @import url('https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap');
+    
+    body {
+    position: relative;
+    overflow-x: hidden;
+    background-color: black;
+}
+body,
+html { height: 100%;}
+.nav .open > a, 
+.nav .open > a:hover, 
+.nav .open > a:focus {background-color: transparent;}
+
+/*-------------------------------*/
+/*           Wrappers            */
+/*-------------------------------*/
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 220px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    left: 220px;
+    width: 0;
+    height: 100%;
+    margin-left: -220px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #1a1a1a;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 220px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding-top: 70px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -220px;
+}
+
+/*-------------------------------*/
+/*     Sidebar nav styles        */
+/*-------------------------------*/
+.navbar {
+  padding: 0;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    position: relative; 
+    line-height: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.sidebar-nav li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 3px;
+    background-color: black;
+    -webkit-transition: width .2s ease-in;
+      -moz-transition:  width .2s ease-in;
+       -ms-transition:  width .2s ease-in;
+            transition: width .2s ease-in;
+
+}
+.sidebar-nav li:hover{
+  background: #ECB9AA
+      !important;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.sidebar-nav li:hover:before,
+.sidebar-nav li.open:hover:before {
+    width: 100%;
+    -webkit-transition: width .2s ease-in;
+      -moz-transition:  width .2s ease-in;
+       -ms-transition:  width .2s ease-in;
+            transition: width .2s ease-in;
+
+}
+
+.sidebar-nav li a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px 15px 10px 30px;    
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus,
+.sidebar-nav li.open a:hover,
+.sidebar-nav li.open a:active,
+.sidebar-nav li.open a:focus{
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+}
+.sidebar-header {
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+.sidebar-brand {
+    height: 65px;
+    position: relative;
+    background:#212531;
+    background: linear-gradient( #54B8AB, #7B8E8D );
+   padding-top: 1em;
+}
+.sidebar-brand a {
+    color: #ddd;
+}
+.sidebar-brand a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.dropdown-header {
+    text-align: center;
+    font-size: 1em;
+    color: #ddd;
+    background:#212531;
+    background: linear-gradient( #54B8AB, #7B8E8D );
+}
+.sidebar-nav .dropdown-menu {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    background-color: #000000;
+    box-shadow: none;
+}
+.dropdown-menu.show {
+    top: 0;
+}
+/*Fontawesome icons*/
+    
+    
+  /*  .nav.sidebar-nav li a::before {
+    font-family: fontawesome;
+    content: "\f12e";
+    vertical-align: baseline;
+    display: inline-block;
+    padding-right: 5px;
+}*/
+    
+    
+ /*   
+a[href*="#home"]::before {
+  content: "\f015" !important;
+}
+a[href*="#about"]::before {
+  content: "\f129" !important;
+}
+a[href*="#events"]::before {
+  content: "\f073" !important;
+}
+a[href*="#events"]::before {
+  content: "\f073" !important;
+}
+a[href*="#team"]::before {
+  content: "\f0c0" !important;
+}
+a[href*="#works"]::before {
+  content: "\f0b1" !important;
+}
+a[href*="#pictures"]::before {
+  content: "\f03e" !important;
+}
+a[href*="#videos"]::before {
+  content: "\f03d" !important;
+}
+a[href*="#books"]::before {
+  content: "\f02d" !important;
+}
+a[href*="#art"]::before {
+  content: "\f1fc" !important;
+}
+a[href*="#awards"]::before {
+  content: "\f02e" !important;
+}
+a[href*="#services"]::before {
+  content: "\f013" !important;
+}
+a[href*="#contact"]::before {
+  content: "\f086" !important;
+}
+a[href*="#followme"]::before {
+  content: "\f099" !important;
+  color: #0084b4;
+}*/
+    
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+
+    p{
+        
+                 font-family: 'Sen', sans-serif;     
+
+    } 
+    
+    h1{
+                font-family: 'Cherry Swash', cursive;
+font-size: 75px;
+        color: #23AA7B;
+    }
+    
+    nav{
+                         font-family: 'Sen', sans-serif;     
+
+    }
+    
+    .ok{
+                        font-family: 'Cherry Swash', cursive;
+
+    }
+    
+   /* linear-gradient(
+315deg
+, #bdc3c7, #2c3e50); */
+    
+    h3{
+                                 font-family: 'Sen', sans-serif;     
+  font-size: 17px;
+
+    }
+    #explanation{
+color: #ddd;
+    }
+    
+.hamburger {
+  position: fixed;
+  top: 20px;  
+  z-index: 999;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-left: 15px;
+  background: transparent;
+  border: none;
+
+
+   
+}
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:active {
+  outline: none;
+}
+.hamburger.is-closed:before {
+  content: '';
+  display: block;
+  width: 100px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed:hover:before {
+  opacity: 1;
+  display: block;
+  -webkit-transform: translate3d(-100px,0,0);
+  -webkit-transition: all .35s ease-in-out;
+}
+
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom,
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  width: 100%;
+}
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom {
+  background-color: #1a1a1a;
+}
+.hamburger.is-closed .hamb-top { 
+  top: 5px; 
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed .hamb-middle {
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger.is-closed .hamb-bottom {
+  bottom: 5px;  
+  -webkit-transition: all .35s ease-in-out;
+}
+
+.hamburger.is-closed:hover .hamb-top {
+  top: 0;
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed:hover .hamb-bottom {
+  bottom: 0;
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+  background-color: #1a1a1a;
+}
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-bottom {
+  top: 50%;
+  margin-top: -2px;  
+}
+.hamburger.is-open .hamb-top { 
+  -webkit-transform: rotate(45deg);
+  -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+}
+.hamburger.is-open .hamb-middle { display: none; }
+.hamburger.is-open .hamb-bottom {
+  -webkit-transform: rotate(-45deg);
+  -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+}
+.hamburger.is-open:before {
+  content: '';
+  display: block;
+  width: 100px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-open:hover:before {
+  opacity: 1;
+  display: block;
+  -webkit-transform: translate3d(-100px,0,0);
+  -webkit-transition: all .35s ease-in-out;
+}
+
+/*-------------------------------*/
+/*            Overlay            */
+/*-------------------------------*/
+
+   
+
+#title{
+  color: #fff;
+}
+
+      </style>
+    <title>ASTRO</title>
+  </head>
+  <body>
+   
+      
+      
+      
+      
+      
+<div id="wrapper">
+   <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+    <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+     <ul class="nav sidebar-nav">
+       <div class="sidebar-header">
+       <div class="sidebar-brand">
+        
+         <a class="ok" href="#">Astroworld</a></div></div>
+       <li><a href="extraterrestre.html">Extraterrestre</a></li>
+       <li><a href="systemesolaire.html">Systeme solaire</a></li>
+      <li><a href="voyageintersideral.html">voyage intergalactique</a></li>
+
+        
+
+      </ul>
+  </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+    			<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+            </button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                      <h1>NASA's Astronomy Picture of the Day</h1>
+                      <h2 id="title"></h2>
+                      <p id="date"></p>
+                      <section class="picture-explanation-container">
+                        <img src="" id="picture" alt="image by NASA" height="400px" width="600px"/>
+                        <p id="explanation"></p>                           
+                           
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+      
+      
+      
+      <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+      
+      
+      
+      
+      <script>
+          $(document).ready(function () {
+  var trigger = $('.hamburger'),
+      overlay = $('.overlay'),
+     isClosed = false;
+
+    trigger.click(function () {
+      hamburger_cross();      
+    });
+
+    function hamburger_cross() {
+
+      if (isClosed == true) {          
+        overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {   
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+  }
+  
+  $('[data-toggle="offcanvas"]').click(function () {
+        $('#wrapper').toggleClass('toggled');
+  });  
+});
+          
+          
+          
+
+const url = 'https://api.nasa.gov/planetary/apod?api_key='
+const api_key = 'lh8PACkSH4XdlQBhWF66TPCRSxCAV2MpK5ZLevVQ' ;
+
+const fetchNASAData = async () => {
+  try {
+    const response = await fetch(`${url}${api_key}`)
+    const data = await response.json()
+    console.log('NASA APOD data', data)
+    displayData(data)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+const displayData = data => {
+  document.getElementById('title').textContent = data.title
+  document.getElementById('date').textContent = data.date
+  document.getElementById('picture').src = data.hdurl
+  document.getElementById('explanation').textContent = data.explanation
+}
+
+fetchNASAData()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
