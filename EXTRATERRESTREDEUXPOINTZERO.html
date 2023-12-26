@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>extraterrestre</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+        
+        @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+#signe{
+                                    font-family: 'Cherry Swash', cursive;
+
+            font-size:60px;
+            color:skyblue;
+        }
+        
+        #lettre{
+            
+                                    font-family: 'Cherry Swash', cursive;
+color:#888;
+            font-size:100px;
+        }
+
+        .smaller{
+            
+            font-family: 'Josefin Slab', serif;
+
+font-size:30px;
+}
+#lettre:hover{
+
+    cursor: pointer;
+	background-color: yellow;
+
+
+  }
+
+#text{
+    font-size: x-large;
+    font-family: 'Josefin Slab', serif;
+color:aliceblue;
+}
+  h1{
+    font-family: 'Cherry Swash', cursive;
+
+font-size:60px;
+color:skyblue;
+  }
+
+  h2{
+    font-family: 'Cherry Swash', cursive;
+
+font-size:60px;
+color:skyblue;
+
+  }
+  
+  .modal-content2 {
+    background-color: #45385B;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largeur de la modal */
+    max-width: 400px; /* Largeur maximale de la modal */
+    margin-top: 10%; /* Marge par rapport au haut de l'écran */
+    color:beige;
+  }
+
+
+
+body{
+
+    background-image: url("uni.jpg");
+
+}
+
+#simulation-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+}
+
+#alien-ship {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+}
+
+#onde{
+    display: none;
+    position: absolute;
+
+
+}
+
+#earth {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+h3{
+    font-family: 'Cherry Swash', cursive;
+
+font-size:60px;
+color:skyblue;
+
+}
+#message1,#message2,#message3 {
+color: aliceblue;
+font-family: 'Josefin Slab', serif;
+font-size:20px;
+
+}
+</style>
+</head>
+<body>
+    
+
+<div class="container">
+
+<h1> Sommes nous seuls dans l'univers?</h1>
+    <div id="myModal2" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal2()">&times;</span>
+            <p id="titremodal2">Message:</p>
+            <p id="modalMessage2">test au calme numero 1</a></p>
+        </div>
+    </div>
+
+
+    <div id="myModal3" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal3()">&times;</span>
+            <p id="titremodal2">Message:</p>
+            <a>    <img id="monImage" src="ufo.png" alt="Description de l'image" width="70" height="70">
+            </a>
+            <p id="modalMessage2"> Cependant, vous pouvez ajouter d'autres éléments enfants à l'élément avec le fond et positionner ceux-ci au-dessus de l'image. Vous pouvez ensuite appliquer des styles ou du contenu à ces éléments enfants.</a></p>
+
+        </div>
+    </div>
+
+
+    <div id="myModal4" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal4()">&times;</span>
+            <p id="titremodal2">Message:</p>
+            <p id="modalMessage2">BONSOIR</a></p>
+        </div>
+    </div>
+
+    <div id="myModal5" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal5()">&times;</span>
+            <p id="titremodal2">Message:</p>
+            <p id="modalMessage2">BONJOUR</a></p>
+        </div>
+    </div>
+
+    <div id="myModal6" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal6()">&times;</span>
+            <p id="titremodal2">Message:</p>
+            <p id="modalMessage2">CA FARTE</a></p>
+        </div>
+    </div>
+
+
+    <div id="myModal7" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal7()">&times;</span>
+            <p id="titremodal2">Message:</p>
+            <p id="modalMessage2">OK MON AMI</a></p>
+        </div>
+    </div>
+
+
+    <div id="myModal8" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal8()">&times;</span>
+            <p id="titremodal2">Message:</p>
+            <p id="modalMessage2">SISI</a></p>
+        </div>
+    </div>
+
+    <div id="myModal9" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal9()">&times;</span>
+            <p id="titremodal2">Message:</p>
+            <p id="modalMessage2">LAMIF</a></p>
+        </div>
+    </div>
+
+    <div class="row">
+        
+        <div class="col">         <div id="lettre" ><p id="n" onclick="openModal2()">N</p></div>
+    </div>
+
+
+
+<div class="col">               <div id="signe"><p>=</p></div>
+</div>
+
+
+
+<div class="col">        <div id="lettre"><p id="r"  onclick="openModal3()" >R<span class="smaller">*</span></p></div>
+</div>
+
+
+<div class="col">            <div id="signe">x</div>
+</div>
+
+
+
+<div class="col">        <div id="lettre"><p id="f1" onclick="openModal4()"    >f<span class="smaller">p</span></p></div>
+</div>
+
+
+<div class="col">            <div id="signe">x</div>
+</div>
+
+
+<div class="col">        <div id="lettre"><p id="n2"  onclick="openModal5()"    >n<span class="smaller">e</span></p></div>
+</div>
+
+
+<div class="col">            <div id="signe">x</div>
+</div>
+
+
+
+<div class="col">        <div id="lettre"><p id="f2"onclick="openModal6()">f<span class="smaller">l</span></p></div>
+</div>
+
+
+<div class="col">            <div id="signe">x</div>
+</div>
+
+
+<div class="col">            <div id="lettre"><p id="f3"  onclick="openModal7()"  >f<span class="smaller">i</span></p></div>
+</div>
+
+
+<div class="col">            <div id="signe">x</div>
+</div>
+
+
+<div class="col">             <div id="lettre"><p id="f4"  onclick="openModal8()"    >f<span class="smaller">c</span></p></div>
+</div>
+
+
+<div class="col">            <div id="signe">x</div>
+</div>
+
+
+<div class="col">        <div id="lettre"><p id="l"  onclick="openModal9()"  >L</p></div>
+</div>
+
+            
+            
+            
+       
+        
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="echelledekardashev" onclick="kardashev()">
+
+
+</div>
+
+
+
+
+
+
+<div id="paradoxedefermi" onclick="fermi()">
+
+
+
+
+</div>
+
+
+
+
+<div id="test">
+<h2  >Echelle de Kardashev</h2>
+
+<div id="text">L’échelle de Kardachev, proposée en 1964 par l'astronome soviétique Nikolaï Kardachev, est une méthode théorique de classement des civilisations en fonction de leur niveau technologique et de leur consommation énergétique.si nous consommons un jour toute l'énergie solaire disponible sur Terre, nous deviendrions une civilisation de type I ; Si nous utilisons toute l'énergie rayonnée chaque seconde par le Soleil, nous deviendrions une civilisation de type II ; Si nous colonisons la Galaxie pour exploiter l'énergie de toutes les étoiles de la même manière, nous serions en passe de devenir une civilisation de type III.</div>
+<button onclick="myFunction()">Cliquez ici pour voir les differents types de civilisation</button>
+</div>
+
+
+</div>
+
+
+
+<h3>Paradoxe de Fermi</h3>
+
+
+
+<div id="simulation-container">
+    <button id="startSimulationBtn">Commencer la simulation</button>
+    <div id="alien-ship"><img src="satellite.png" alt="" width="100" height="100">
+    </div>
+    <div id="onde"><img src="onde-sonore.png" alt="" width="100" height="100"></div>        
+    <div id="earth"><img src="terre.png" alt="" width="100" height="100">
+    </div>
+
+
+
+
+    <br><br>
+    <br><br>
+
+    <br><br>
+
+<div id="message1"></div>
+
+<br>
+<div id="message2"></div>
+<br>
+
+<div id="message3"></div>
+
+
+</div>
+
+
+
+
+
+<p>Les récentes decouvertes astronomiques démontrent que la Voie lactée contient plus de 100 milliards d’étoiles et que le Système solaire n’y constitue pas une exception, le nombre de planètes où la vie se serait développée devrait être gigantesque, à partir de ce postulat Enrico Fermi se lance en 1950 dans une estimation iconoclaste : évaluer le nombre potentiel de civilisations extraterrestres intelligentes en mesure d'entrer en contact avec la Terre. C'est ainsi qu'est né Le paradoxe de Fermi avec une série de questions sur le sujet.</p>
+
+    <script>
+     var currentIndex = 0;
+
+function myFunction() {
+var texts = ["Une civilisation de type 1 utilise des ressources qui proviennent uniquement de sa planete, c'est une civilisation qui controle l'entiereté de l'energie planetaire, Pour nous, ça veut dire la puissance disponible sur Terre. Ceci inclut le vent, les cyclones, les marrées, la chaleur, les volcans, les orages, les énergies fossiles (charbon, gaz, nucléaire…) et les énergies du vivant (bois, biocarburant…).L'humanité se rapproche du stade 1.", "Une civilisation dite de « type II » doit s'avérer etre capable de collecter toute la puissance de son étoile, pour les terriens ca signifie etre capable d'exploiter l'energie du soleil. Une civilisation s'engageant vers le type II doit maîtriser le voyage spatial, la communication interplanétaire, l'ingénierie stellaire et le climat", "Mini","zozo", "vivi", "miaou"]
+var textElement = document.getElementById('text');
+
+        // Display the current word in the 'text' element
+        textElement.innerHTML = texts[currentIndex];
+
+        // Increment the index for the next word
+        currentIndex = (currentIndex + 1) % texts.length;
+}
+
+
+function fermi(){
+
+
+}
+
+
+
+function kardashev(){
+
+
+};
+
+
+
+
+
+function closeModal2() {
+    var modal = document.getElementById("myModal2");
+    modal.style.display = "none";
+}
+
+
+function openModal2() {
+    var modal = document.getElementById("myModal2");
+    modal.style.display = "block";
+}
+
+
+function openModal3() {
+    var modal = document.getElementById("myModal3");
+    modal.style.display = "block";
+}
+function closeModal3() {
+    var modal = document.getElementById("myModal3");
+    modal.style.display = "none";
+}
+
+
+
+function openModal4() {
+    var modal = document.getElementById("myModal4");
+    modal.style.display = "block";
+}
+function closeModal4() {
+    var modal = document.getElementById("myModal4");
+    modal.style.display = "none";
+}
+
+function openModal5() {
+    var modal = document.getElementById("myModal4");
+    modal.style.display = "block";
+}
+function closeModal5() {
+    var modal = document.getElementById("myModal5");
+    modal.style.display = "none";
+}
+
+
+function openModal6() {
+    var modal = document.getElementById("myModal6");
+    modal.style.display = "block";
+}
+function closeModal6() {
+    var modal = document.getElementById("myModal6");
+    modal.style.display = "none";
+}
+
+
+function openModal7() {
+    var modal = document.getElementById("myModal7");
+    modal.style.display = "block";
+}
+function closeModal7() {
+    var modal = document.getElementById("myModal7");
+    modal.style.display = "none";
+}
+
+
+function openModal8() {
+    var modal = document.getElementById("myModal8");
+    modal.style.display = "block";
+}
+function closeModal8() {
+    var modal = document.getElementById("myModal8");
+    modal.style.display = "none";
+}
+
+
+function openModal9() {
+    var modal = document.getElementById("myModal9");
+    modal.style.display = "block";
+}
+function closeModal9() {
+    var modal = document.getElementById("myModal9");
+    modal.style.display = "none";
+}
+
+
+
+
+
+const startBtn = document.getElementById('startSimulationBtn');
+const alienShip = document.getElementById('alien-ship');
+const earth = document.getElementById('earth');
+const onde = document.getElementById('onde');
+
+
+startBtn.addEventListener('click', startSimulation);
+
+function startSimulation() {
+    startBtn.disabled = true;
+
+    animateAlienShip();
+    setTimeout(() => {
+        earth.style.opacity = '0';
+        showAlienShip();
+    }, 3000);
+}
+
+function animateAlienShip() {
+    alienShip.style.display = 'block';
+    document.getElementById("message1").innerHTML = "un sattelite a été envoyé...dans l'univers. aurons nous une réponse?";
+
+    let position = 0;
+
+    const animationInterval = setInterval(() => {
+        position += 5;
+        alienShip.style.left = position + 'px';
+
+        if (position >= 350) {
+            clearInterval(animationInterval);
+            onderadio();
+        }
+    }, 60);
+}
+
+function showAlienShip() {
+    alienShip.style.display = 'none';
+
+    earth.style.opacity = '1';
+    startBtn.disabled = false;
+}
+
+
+
+function onderadio(){
+    startBtn.disabled = true;
+
+    document.getElementById("message1").innerHTML = "En dehors des sondes et des sattelites nous envoyons des ondes radios aussi";
+    onde.style.display = 'block';
+    let position = 0;
+
+const animationInterval = setInterval(() => {
+    position += 5;
+    onde.style.left = position + 'px';
+
+    if (position >= 350) {
+        clearInterval(animationInterval);
+        onde.style.display = 'none';
+        document.getElementById("message1").innerHTML = "Malgré les nombreuses emissions radio de la Terre....";
+        document.getElementById("message2").innerHTML = "Jusqu'a ce jour nous n'avons recu aucune manifestation extreaterrestre....";
+        document.getElementById("message3").innerHTML = "Peut etre nous ne cherchons pas de la bonne maniere ou peut etre sommes nous seuls...";
+        startBtn.disabled = false;
+
+    }
+}, 60);
+
+}
+
+
+    </script>
+</body>
+</html>

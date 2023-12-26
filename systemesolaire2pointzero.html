@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+      
+      
+      
+      <style>
+           @import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@700&display=swap');
+              @import url('https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap');
+              @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+              @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');          
+          
+          
+       body{
+        background-image: url('testbackground.jpg');
+           color: white; 
+         font-family: 'Sen', sans-serif;  
+}
+
+            #container{
+        max-width: 700px;
+	  margin: auto;
+                 margin-top: 90px;
+  margin-bottom: 90px
+    }  
+      
+            .row{
+  margin-top: 90px;
+  margin-bottom: 90px
+} 
+          
+          h1{
+             border-style: solid;
+	border-width: 10px;
+	           color: #f4f4f4;
+
+	border-color: aquamarine;
+        font-size:40px;
+        font-family: 'Pixelify Sans', sans-serif;
+          }
+          
+          
+          #back{
+            
+            font-family: 'Cherry Swash', cursive;
+                        font-size:30px;
+            color: gray;
+background: linear-gradient(
+#00C9FF
+, #92FE9D);
+        }  
+          
+          
+          p{
+               font-family: 'Sen', sans-serif;
+                         color: #f4f4f4 
+
+          }
+          
+         
+          
+          #lahaine{
+              font-size:20px;
+font-family: 'Timmana', sans-serif;              
+          }
+          #resultat{
+              
+              
+              font-size:20px;
+          }
+
+
+          .navbar{
+            position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+       }
+
+          footer{
+            position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black; /* Vous pouvez changer cela en fonction de votre design */
+  padding: 50px;
+  z-index: 1000; 
+          }
+
+#resultat{
+    font-size: 50px;
+    font-family: 'VT323', monospace;
+}
+
+          #resultat0{
+            color: #f4f4f4;
+            font-family: 'Pixelify Sans', sans-serif;
+font-size: 30px;
+          }
+      </style>
+      
+      
+      
+    <title> Differents types de planetes</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-transparent">
+        <div class="d-flex justify-content-center">
+          <div class="form-inline">
+            <input class="form-control mr-sm-2" type="number" id="votrepoidenkg" placeholder="Mettez votre poids ici">
+          </div>
+        </div>
+      </nav>
+     <div id='container'>
+
+          <div id="back"><a href="">ASTROWORLD</a> </div>
+        <br>
+         <h1> Combien de temps pouvez vous survivre sur les autres planetes du systeme solaire?</h1>
+         
+        
+         <br>
+         
+       
+         
+         
+         <div class="row">
+         
+         <p id="lahaine">......C'est l'histoire d'un homme qui tombe d'un immeuble de 50 étages. Le mec, au fur et à mesure de sa chute, il se répète sans cesse pour se rassurer : " Jusqu'ici tout va bien... Jusqu'ici tout va bien... Jusqu'ici tout va bien. " Mais l'important, c'est pas la chute. C'est l'atterrissage......
+ </p>
+         
+         <p> Citation tirée du film La Haine</p>
+         </div>
+         
+         <br>
+<select id="selectname">
+        <option value="tout">tout</option>
+            <option value="gazeuse">gazeuse</option>
+            <option value="tellurique">tellurique</option>
+           
+        </select>
+        <button id= "launchfilter">filtrer </button>
+                 <br>
+
+
+
+    
+         
+
+    <div class="row">
+        
+        
+        <div class="col-3"> <div class="planete tellurique" id="mars" data-toggle="tooltip" data-placement="top" title="Mars">
+    <img class="img-fluid"
+    src="3D_Mars.png" 
+    height="40px" 
+    width="60px" /> 
+  </div> </div>
+        
+        
+        
+        <div class="col-3">  <div class="planete gazeuse" id="jupiter" data-toggle="tooltip" data-placement="top" title="Jupiter">
+               <img class="img-fluid"
+    src="3D_Jupiter.png" 
+    height="40px" 
+    width="60px" />  
+    
+  </div> </div>
+        
+     <div class="col-3">    <div class="planete tellurique"  id="terre" data-toggle="tooltip" data-placement="top" title="la planete bleu, la Terre" >
+            <img class="img-fluid"
+    src="terre.png" 
+    height="40px" 
+    width="60px" />  
+        
+  </div> </div>
+        
+        
+        
+        <div class="col-3">    <div class="planete gazeuse" id="saturne" data-toggle="tooltip" data-placement="top" title="Saturne">
+            <img class="img-fluid"
+    src="3D_Saturn.png" 
+    height="70px" 
+    width="90px" /> 
+  </div> </div>
+      
+      
+      </div>
+      
+      
+      
+      
+        <div class="row">
+            
+            
+        <div class="col-3"> <div class="planete tellurique" id="venus" data-toggle="tooltip" data-placement="top" title="Venus">
+            <img class="img-fluid"
+    src="3D_Venus.png" 
+    height="40px" 
+    width="60px" /> 
+  </div>  </div>
+            
+            
+            
+            
+        <div class="col-3">   <div class="planete tellurique" id="mercure" data-toggle="tooltip" data-placement="top" title="Mercure">
+            <img class="img-fluid"
+    src="MERCURE.png" 
+    height="40px" 
+    width="60px" /> 
+  </div> </div>
+        
+      <div class="col-3">    <div class="planete gazeuse" id="neptune" data-toggle="tooltip" data-placement="top" title="Neptune">
+            <img class="img-fluid"
+    src="3D_Neptune.png" 
+    height="40px" 
+    width="60px" /> 
+  </div> </div>
+        <div class="col-3">      <div class="planete gazeuse" id="uranus" data-toggle="tooltip" data-placement="top" title="Uranus">
+              <img class="img-fluid"
+    src="3D_Uranus.png" 
+    height="40px" 
+    width="60px" /> 
+  </div>  </div>
+      
+  
+      </div>
+      
+      
+      <div class="row">
+          <div class="col">
+         <div id="resultat"></div>
+        </div>
+         
+         </div>
+      
+      <br>
+                 <br>
+   <br>
+    <br>        <br>
+                 <br>
+   <br>
+    <br>         <br>
+       <br>
+       <br>
+    <br>
+       <br>
+  <br>      <br>
+       <br>
+       <br>
+    <br>     <br>
+                <br>
+              <br>
+                 <br>
+   <br>
+    <br>         <br>
+       <br>
+       <br>
+    <br>
+       <br>
+  <br>        <br>
+   <br>
+    <br>         
+   <br>
+    <br>         <br>
+       <br>
+       <br>
+    <br>
+       <br>
+  <br>
+       <br>
+  <br>
+
+ <div class="row">
+          <div class="col">
+              <p> La planete <a href="carlsaganterre.html">Terre</a> est de loin la meilleure planete du systeme solaire, voire des systemes aux alentours....</p>
+        </div>
+         
+         </div>
+         
+         
+         
+      </div>
+      <br>
+      <br>
+ <br>
+      <br>
+ <br>
+    <footer>    <div id="resultat0"></div>
+                  
+    </footer>
+
+<script>
+
+var selectnames = document.querySelector('#selectname');
+    var buttonname= document.querySelector('#launchfilter');
+    var prenoms= document.querySelectorAll('.planete');
+    var telluriques= document.querySelectorAll('.tellurique');
+    var gazeuses = document.querySelectorAll('.gazeuse');
+    var poidvoyageur = document.getElementById("votrepoidenkg").value;
+    var affichagepoidvoyageur = document.getElementById('resultat0');
+    
+    
+    
+    buttonname.addEventListener("click", function(){
+        var filter= selectnames.value;
+        
+        if (filter == 'tout' ){
+            prenoms.forEach(p=> p.style.display = 'block');
+        } else if ( filter == 'tellurique'){
+            prenoms.forEach(p=> p.style.display = 'none');
+            telluriques.forEach (p=> p.style.display = 'block');
+        }else if (filter == 'gazeuse'){
+            prenoms.forEach (p=> p.style.display = 'none');
+            gazeuses.forEach (p=> p.style.display = 'block');
+        }
+    });
+    
+    
+    
+    var mars = document.getElementById("mars");
+    var terre = document.getElementById("terre");
+   
+    
+     var jupiter = document.getElementById("jupiter");
+    var mercure = document.getElementById("mercure");
+    var saturne = document.getElementById("saturne");
+    var venus = document.getElementById("venus");
+    var uranus = document.getElementById("uranus");
+    var neptune = document.getElementById("neptune");
+    
+    
+        saturne.addEventListener("click", function() { message(' Indice de dangerosité: Extreme');
+             var poidvoyageur = document.getElementById("votrepoidenkg").value;                                           
+         var calculpoidsaturne =  poidvoyageur  *1.08 ;            resultat0.innerHTML= 'Sur Saturne vous pesez ' + ' '  + calculpoidsaturne +  'kg.' + ' ' + 'Type de mort: Compression - Eclatement  ' ;                           
+                                                     
+                                                     });
+    
+    
+    
+    uranus.addEventListener("click", function() { message('  Indice de dangerosité:  Extreme    '); 
+                                       var poidvoyageur = document.getElementById("votrepoidenkg").value;                                           
+         var calculpoiduranus =  poidvoyageur  *0.91 ;            resultat0.innerHTML= 'Sur Uranus vous pesez' + ' '  + calculpoiduranus +  'kg.' + ' ' + 'Type de mort: Compression - Eclatement  ';       
+                                                });
+    
+    
+    
+    venus.addEventListener("click", function() { message('   Indice de dangerosité:  Infernal              '); 
+                                               
+     var poidvoyageur = document.getElementById("votrepoidenkg").value;                                           
+         var calculpoidvenus =  poidvoyageur  * 0.91 ;            resultat0.innerHTML= 'Sur Venus vous pesez ' + ' '  + calculpoidvenus +  'kg.' + ' ' + 'Type de mort: Intoxication - Brulure - Compression' ;                                  
+                                               
+                                               });
+    
+    
+    
+    neptune.addEventListener("click", function() { message('Indice de dangerosité:  Extreme  '); 
+   var poidvoyageur = document.getElementById("votrepoidenkg").value;                                           
+         var calculpoidneptune =  poidvoyageur  * 1.14 ;            resultat0.innerHTML= 'Sur Neptune vous pesez' + ' '  + calculpoidneptune +  'kg.' + ' ' + 'Type de mort: Compression - Eclatement ';                                                                         
+                                  
+                                                 });
+    
+    
+    mercure.addEventListener("click", function() { message(' Indice de dangerosité:  Considérable  '); 
+     var poidvoyageur = document.getElementById("votrepoidenkg").value;                                           
+         var calculpoidmercure =  poidvoyageur  * 0.377 ;            resultat0.innerHTML= 'Sur Mercure vous pesez ' + ' '  + calculpoidmercure +  'kg.' + ' ' + 'Type de mort: Brulure - Congelation' ;                                                                       
+                                  
+                                                 });
+    
+    
+    
+    
+    
+        jupiter.addEventListener("click", function() { message('Indice de dangerosité:  Extreme ');
+                                       
+        var poidvoyageur = document.getElementById("votrepoidenkg").value;                                           
+         var calculpoidjupiter =  poidvoyageur  * 2.53 ;            resultat0.innerHTML= 'Sur Jupiter vous pesez ' + ' '  + calculpoidjupiter +  'kg.' + ' ' + 'Type de mort: Compression - Eclatement' ;                                                                        });
+
+    
+    
+    
+    
+    
+    
+    
+    
+    mars.addEventListener("click", function() { message(' Indice de dangerosité:  Modéré ');
+                                              
+      var poidvoyageur = document.getElementById("votrepoidenkg").value;                                           
+         var calculpoidmars =  poidvoyageur  * 0.38 ;            resultat0.innerHTML= 'Sur Mars vous pesez ' + ' '  + calculpoidmars +  'kg.' + ' ' + 'Type de mort: Congélation' ;                                                 
+                                              
+                                              });
+    
+    
+    
+    
+    
+    terre.addEventListener("click", function() { message('Indice de dangerosité: Nul'); 
+      var poidvoyageur = document.getElementById("votrepoidenkg").value;                                           
+         var calculpoidterre =  poidvoyageur ;            resultat0.innerHTML= 'Sur Terre vous pesez ' + ' '  + calculpoidterre +  'kg.' + ' ' + 'Type de mort: Nul' ;                                                                                               
+                                               
+                                               });
+    
+    
+    
+    
+    
+    
+    
+   function message(texte) {
+            document.getElementById("resultat").innerHTML = texte;
+        }
+
+
+</script>
+  
+  </body>
+</html>
