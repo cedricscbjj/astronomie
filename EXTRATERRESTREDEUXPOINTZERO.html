@@ -10,10 +10,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
         
-        @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@500&display=swap');
 #signe{
                                     font-family: 'Cherry Swash', cursive;
 
@@ -117,10 +115,56 @@ font-size:60px;
 color:skyblue;
 
 }
-#message1,#message2,#message3 {
+#message1,#message2,#message3, #intro {
 color: aliceblue;
 font-family: 'Josefin Slab', serif;
 font-size:20px;
+
+}
+
+#intro2{
+    font-family: 'Afacad', sans-serif;
+    color: aliceblue;
+    font-size:20px;
+
+}
+
+.franky{
+
+    color: pink;
+    border-style: dotted ;
+}
+
+.franky:hover{
+
+cursor: pointer;
+background-color: pink;
+
+
+}
+
+.fermi:hover{
+    cursor: pointer;
+background-color: pink;
+}
+
+
+#fermi2{
+    color: pink;
+
+}
+
+#fermi2:hover{
+    cursor: pointer;
+background-color: pink;
+}
+
+
+
+.close:hover{
+    cursor: pointer;
+
+
 
 }
 </style>
@@ -131,11 +175,14 @@ font-size:20px;
 <div class="container">
 
 <h1> Sommes nous seuls dans l'univers?</h1>
+
+<p id="intro2" >Avec cette equation  <span class="franky" onclick="openModal10()"> Franck Drake </span>  tente d'estimer le nombre potentiel de civilisations extraterrestres dans notre galaxie avec qui nous pourrions entrer en contact. Le principal objet de cette équation permet d'estimer le nombre N de civilisations technologiquement avancées capables d'entrer en communication avec la Terre, ou pour le moins de générer des technosignatures (rejet d'energies massif et visibles, emissions radios, etc) que nous pourrions détecter</p>
+
     <div id="myModal2" class="modal">
         <div class="modal-content2">
             <span class="close" onclick="closeModal2()">&times;</span>
-            <p id="titremodal2">Message:</p>
-            <p id="modalMessage2">test au calme numero 1</a></p>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">L'équation de Drake dit que le nombre N probable de civilisations dans notre galaxie est égale au produit de sept paramètres</a></p>
         </div>
     </div>
 
@@ -143,10 +190,10 @@ font-size:20px;
     <div id="myModal3" class="modal">
         <div class="modal-content2">
             <span class="close" onclick="closeModal3()">&times;</span>
-            <p id="titremodal2">Message:</p>
+            <p id="titremodal2"></p>
             <a>    <img id="monImage" src="ufo.png" alt="Description de l'image" width="70" height="70">
             </a>
-            <p id="modalMessage2"> Cependant, vous pouvez ajouter d'autres éléments enfants à l'élément avec le fond et positionner ceux-ci au-dessus de l'image. Vous pouvez ensuite appliquer des styles ou du contenu à ces éléments enfants.</a></p>
+            <p id="modalMessage2"> nombre d étoiles qui se forment annuellement dans notre galaxie</a></p>
 
         </div>
     </div>
@@ -155,16 +202,17 @@ font-size:20px;
     <div id="myModal4" class="modal">
         <div class="modal-content2">
             <span class="close" onclick="closeModal4()">&times;</span>
-            <p id="titremodal2">Message:</p>
-            <p id="modalMessage2">BONSOIR</a></p>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">fp est la part des étoiles dotées de planètes
+            </a></p>
         </div>
     </div>
 
     <div id="myModal5" class="modal">
         <div class="modal-content2">
             <span class="close" onclick="closeModal5()">&times;</span>
-            <p id="titremodal2">Message:</p>
-            <p id="modalMessage2">BONJOUR</a></p>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">ne est l espérance du nombre de planètes potentiellement propices à la vie par étoile</a></p>
         </div>
     </div>
 
@@ -172,7 +220,7 @@ font-size:20px;
         <div class="modal-content2">
             <span class="close" onclick="closeModal6()">&times;</span>
             <p id="titremodal2">Message:</p>
-            <p id="modalMessage2">CA FARTE</a></p>
+            <p id="modalMessage2">fl est la part de ces planètes où la vie apparaît effectivement</a></p>
         </div>
     </div>
 
@@ -180,8 +228,8 @@ font-size:20px;
     <div id="myModal7" class="modal">
         <div class="modal-content2">
             <span class="close" onclick="closeModal7()">&times;</span>
-            <p id="titremodal2">Message:</p>
-            <p id="modalMessage2">OK MON AMI</a></p>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">part de ces planètes où apparaît la vie intelligente</a></p>
         </div>
     </div>
 
@@ -189,18 +237,102 @@ font-size:20px;
     <div id="myModal8" class="modal">
         <div class="modal-content2">
             <span class="close" onclick="closeModal8()">&times;</span>
-            <p id="titremodal2">Message:</p>
-            <p id="modalMessage2">SISI</a></p>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">fc est la part de ces planètes capables et désireuses de communiquer</a></p>
         </div>
     </div>
 
     <div id="myModal9" class="modal">
         <div class="modal-content2">
             <span class="close" onclick="closeModal9()">&times;</span>
-            <p id="titremodal2">Message:</p>
-            <p id="modalMessage2">LAMIF</a></p>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">durée de vie moyenne d une civilisation, en années</a></p>
         </div>
     </div>
+
+
+    <div id="myModal10" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal10()">&times;</span>
+
+            <p id="titremodal2"></p>
+            <a>    <img id="monImage" src="equation-de-drake.jpg" alt="Description de l'image" width="170" height="120">
+            </a>
+            <p id="modalMessage2">Frank Drake, né en 1930, est un astrophysicien américain renommé. Pionnier dans la recherche d'une intelligence extraterrestre, il a créé l'équation de Drake pour estimer le nombre potentiel de civilisations extraterrestres dans notre galaxie. Il a également fondé le projet SETI (Search for Extraterrestrial Intelligence) en 1960 et a été un contributeur majeur à l'étude des ondes radio astronomiques.</p>
+        </div>
+    </div>
+
+
+
+
+    <div id="myModal11" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal11()">&times;</span>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">Les distances dans lespace sont justes impossible à representer pour le cerveau humain, elles sont inouies. Si nous navons pas reussi a rencontrer des civilisations extraterrestres cest parce que les distances sont gigantesques a titre dexemple nos signals radio couvrent aux alentours 40000 annees lumieres alors que notre galaxie entiere fait une largeur denviron 100 000 ANNEES LUMIERES</p>
+        </div>
+    </div>
+
+
+    <div id="myModal12" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal12()">&times;</span>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">Nous avons tendence a faire de lantropomorphisme en pensant que des etres venant dailleurs auront des caracteristiques communes avec les humains, il est peut possible que ces etres vivants puissent etre plus proche des meduses que des bipedes, il est peut etre possible que ces choses ne soient pas constitués de matieres organiques et puissent davantage plus proche dun robot.</p>
+        </div>
+    </div>
+
+
+
+    <div id="myModal13" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal13()">&times;</span>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">Les extraterrestres existent et nous surveillent de tres tres loin, cela ne veut pas dire qu ils sont cachés parmis nous, ils sont a lexterieur, on parle parfois aussi de zoo humain</a></p>
+        </div>
+    </div>
+
+
+
+    <div id="myModal14" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal14()">&times;</span>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">tant que nous naurons pas passer un certain cap technologique nous ne pourrons pas rentrer en contact avec des ET. Il est possible que notre degré de technicité soit un frein pour la decouverte de la vie ailleurs, on ignore peut etre nos messages envoyés dans lespace a cause de notre aspect primitif</p>
+        </div>
+    </div>
+
+
+
+    <div id="myModal15" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal15()">&times;</span>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">nous avons deja recu la visite des extraterrestres, les phenomenes OVNI peuvent rejoindre cette theorie, il est possible que des civilisations exterieures envoient des objets dans lespace pour caertographier lunivers</p>
+        </div>
+    </div>
+
+
+
+    <div id="myModal16" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal16()">&times;</span>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">nous ne sommes pas en capacite de rentrer en contact avec les extraterrestres car nos technologies sont inadequates pour communiquer avec eux, soit nous utilisons des techniques obsoletes soit nos lointains ne sont pas en possibilite de receptionner ces messages car nayant pas encore acces a une technologie poussée.</p>
+        </div>
+    </div>
+
+
+
+    <div id="myModal18" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal18()">&times;</span>
+            <p id="titremodal2"></p>
+            <p id="modalMessage2">
+                Enrico Fermi (1901-1954) était un physicien italien-américain renommé. Lauréat du prix Nobel de physique en 1938, il a dirigé le projet Manhattan, contribuant au développement de la première bombe atomique. Fermi est également connu pour la paradoxe de Fermi, qui questionne pourquoi, malgré les probabilités élevées, nous n'avons pas encore détecté de signes de civilisations extraterrestres avancées.</a></p>
+        </div>
+    </div>
+
 
     <div class="row">
         
@@ -313,7 +445,7 @@ font-size:20px;
 
 
 
-
+<br><br><br>
 <div id="test">
 <h2  >Echelle de Kardashev</h2>
 
@@ -322,15 +454,28 @@ font-size:20px;
 </div>
 
 
-</div>
 
 
 
-<h3>Paradoxe de Fermi</h3>
+
+
+
+
+<br><br>
+
+
+<div>    <img src="galaxytransparent.png" class="img-fluid" width="600" height="400">     </div>
+
+<br><br>
+
+
+<h3>Paradoxe de <span onclick="openModal18()" id="fermi2">Fermi</span></h3>
 
 
 
 <div id="simulation-container">
+
+
     <button id="startSimulationBtn">Commencer la simulation</button>
     <div id="alien-ship"><img src="satellite.png" alt="" width="100" height="100">
     </div>
@@ -360,14 +505,76 @@ font-size:20px;
 
 
 
+<p id="intro">Les récentes decouvertes astronomiques démontrent que la Voie lactée contient plus de 100 milliards d’étoiles et que le Système solaire n’y constitue pas une exception, le nombre de planètes où la vie se serait développée devrait être gigantesque, à partir de ce postulat Enrico Fermi se lance en 1950 dans une estimation iconoclaste : évaluer le nombre potentiel de civilisations extraterrestres intelligentes en mesure d'entrer en contact avec la Terre. C'est ainsi qu'est né Le paradoxe de Fermi avec une série de questions sur le sujet.</p>
+<br><br>
 
-<p>Les récentes decouvertes astronomiques démontrent que la Voie lactée contient plus de 100 milliards d’étoiles et que le Système solaire n’y constitue pas une exception, le nombre de planètes où la vie se serait développée devrait être gigantesque, à partir de ce postulat Enrico Fermi se lance en 1950 dans une estimation iconoclaste : évaluer le nombre potentiel de civilisations extraterrestres intelligentes en mesure d'entrer en contact avec la Terre. C'est ainsi qu'est né Le paradoxe de Fermi avec une série de questions sur le sujet.</p>
+<div class="row">
+
+    <div class="col-2">   <div class="fermi"   data-placement="top" title="" onclick="openModal11()"   >
+        <img class="img-fluid"
+src="distance.png" 
+height="70px" 
+width="80px"/> 
+</div> </div>
+    
+  <div class="col-2">    <div class="fermi"   data-placement="top" title=""  onclick="openModal12()" >
+        <img class="img-fluid"
+src="spyware.png" 
+height="70px" 
+width="80px" /> 
+</div> </div>
+    <div class="col-2">      <div class="fermi"   data-placement="top" title=""  onclick="openModal13()"   >
+          <img class="img-fluid"
+src="ufo.png" 
+height="70px" 
+width="80px" /> 
+</div>  </div>
+
+    
+
+
+
+
+
+
+    <div class="col-2">   <div class="fermi"   data-placement="top" title="" onclick="openModal14()"    >
+        <img class="img-fluid"
+src="technology.png" 
+height="70px" 
+width="80px" /> 
+</div> </div>
+    
+  <div class="col-2">    <div class="fermi"   data-placement="top" title=""  onclick="openModal15()"     >
+        <img class="img-fluid"
+src="predator.png" 
+height="70px" 
+width="80px" /> 
+</div> </div>
+    <div class="col-2">      <div class="fermi"   data-placement="top" title=""   onclick="openModal16()"  >
+          <img class="img-fluid"
+src="satellite.png" 
+height="70px" 
+width="80px" /> 
+</div>  </div>
+
+</div>
+
+</div>
+
+<br><br><br>
+
+
+
+
+
+
+
 
     <script>
      var currentIndex = 0;
 
 function myFunction() {
-var texts = ["Une civilisation de type 1 utilise des ressources qui proviennent uniquement de sa planete, c'est une civilisation qui controle l'entiereté de l'energie planetaire, Pour nous, ça veut dire la puissance disponible sur Terre. Ceci inclut le vent, les cyclones, les marrées, la chaleur, les volcans, les orages, les énergies fossiles (charbon, gaz, nucléaire…) et les énergies du vivant (bois, biocarburant…).L'humanité se rapproche du stade 1.", "Une civilisation dite de « type II » doit s'avérer etre capable de collecter toute la puissance de son étoile, pour les terriens ca signifie etre capable d'exploiter l'energie du soleil. Une civilisation s'engageant vers le type II doit maîtriser le voyage spatial, la communication interplanétaire, l'ingénierie stellaire et le climat", "Mini","zozo", "vivi", "miaou"]
+var texts = ["Une civilisation de type 1 utilise des ressources qui proviennent uniquement de sa planete, c'est une civilisation qui controle l'entiereté de l'energie planetaire, Pour nous, ça veut dire la puissance disponible sur Terre. Ceci inclut le vent, les volcans, les orages, les énergies fossiles (charbon, gaz, nucléaire…) et etc...L'humanité se rapproche du stade 1.", "Une civilisation dite de « type II » doit s'avérer etre capable de collecter toute la puissance de son étoile, pour les terriens ca signifie etre capable d'exploiter l'energie du soleil. Une civilisation s'engageant vers le type II doit maîtriser le voyage spatial, la communication interplanétaire, l'ingénierie stellaire et le climat", "Une civilisation dite de « type II » doit s'avérer etre capable de collecter toute la puissance de son étoile, pour les terriens ca signifie etre capable d'exploiter l'energie du soleil. Une civilisation s'engageant vers le type II doit maîtriser le voyage spatial, la communication interplanétaire, l'ingénierie stellaire et le climat","Une civilisation dite de « type III » a à sa disposition toute la puissance émise par la galaxie dans laquelle elle est située. Non seulement capable d'exploiter son etoile cette civilisation pourrait exploiter le noyau de sa galaxie voire meme les trous noirs.", "La classification de civilisation de type 4, selon la proposition de l'astrophysicien Kardashev, décrit une société capable de contrôler et d'utiliser toute l'énergie d'une galaxie. Une civilisation de type 4 maîtriserait des technologies avancées permettant de manipuler des systèmes stellaires à une échelle intergalactique.", "La notion hypothétique de civilisation de type 5, basée sur la classification de Kardashev, implique une entité capable de contrôler et d'utiliser l'énergie de multiples galaxies. Cette société ultravancée aurait la capacité de manipuler l'énergie à une échelle cosmique, transcendant les limites de notre univers observable.", "La civilisation de type 6  serait capable de maîtriser l'énergie à l'échelle de l'univers observable, englobant tous les univers parallèles. Cette idée reste spéculative et relève davantage de la fiction scientifique que d'une réalité scientifiquement démontrée. "]
 var textElement = document.getElementById('text');
 
         // Display the current word in the 'text' element
@@ -474,6 +681,87 @@ function closeModal9() {
     var modal = document.getElementById("myModal9");
     modal.style.display = "none";
 }
+
+
+function openModal10() {
+    var modal = document.getElementById("myModal10");
+    modal.style.display = "block";
+}
+function closeModal10() {
+    var modal = document.getElementById("myModal10");
+    modal.style.display = "none";
+}
+
+
+function openModal11() {
+    var modal = document.getElementById("myModal11");
+    modal.style.display = "block";
+}
+function closeModal11() {
+    var modal = document.getElementById("myModal11");
+    modal.style.display = "none";
+}
+
+function openModal12() {
+    var modal = document.getElementById("myModal12");
+    modal.style.display = "block";
+}
+function closeModal12() {
+    var modal = document.getElementById("myModal12");
+    modal.style.display = "none";
+}
+
+
+function openModal13() {
+    var modal = document.getElementById("myModal13");
+    modal.style.display = "block";
+}
+function closeModal13() {
+    var modal = document.getElementById("myModal13");
+    modal.style.display = "none";
+}
+
+
+function openModal14() {
+    var modal = document.getElementById("myModal14");
+    modal.style.display = "block";
+}
+function closeModal14() {
+    var modal = document.getElementById("myModal14");
+    modal.style.display = "none";
+}
+
+function openModal15() {
+    var modal = document.getElementById("myModal15");
+    modal.style.display = "block";
+}
+function closeModal15() {
+    var modal = document.getElementById("myModal15");
+    modal.style.display = "none";
+}
+
+
+function openModal16() {
+    var modal = document.getElementById("myModal16");
+    console.log('open');
+
+    modal.style.display = "block";
+}
+function closeModal16() {
+    var modal = document.getElementById("myModal16");
+    console.log('je ferme');
+    modal.style.display = "none";
+}
+
+function openModal18() {
+    var modal = document.getElementById("myModal18");
+    modal.style.display = "block";
+}
+function closeModal18() {
+    var modal = document.getElementById("myModal18");
+    modal.style.display = "none";
+}
+
 
 
 
