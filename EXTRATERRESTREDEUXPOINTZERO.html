@@ -12,6 +12,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap');
         
 @import url('https://fonts.googleapis.com/css2?family=Afacad:wght@500&display=swap');
+
+
+#display{
+color: #FFFFFF;
+font-family: 'Josefin Slab', serif;
+font-size:60px;
+
+}
+
+
+
+
+	
 #signe{
                                     font-family: 'Cherry Swash', cursive;
 
@@ -225,7 +238,12 @@ background-color: pink;
     
 
 <div class="container">
+    <div id="display"></div>
 
+
+
+
+	
 <h1> Sommes nous seuls dans l'univers?</h1>
 
 <p id="intro2" >Avec cette equation  <span class="franky" onclick="openModal10()"> Franck Drake </span>  tente d'estimer le nombre potentiel de civilisations extraterrestres dans notre galaxie avec qui nous pourrions entrer en contact. Le principal objet de cette équation permet d'estimer le nombre N de civilisations technologiquement avancées capables d'entrer en communication avec la Terre, ou pour le moins de générer des technosignatures (rejet d'energies massif et visibles, emissions radios, etc) que nous pourrions détecter</p>
@@ -888,7 +906,11 @@ const animationInterval = setInterval(() => {
 }, 60);
 
 }
-
+function showInput() {
+    var userInput = localStorage.getItem('userInput');
+    document.getElementById('display').innerText =   (userInput ? userInput : "Cher invité") + "," ;
+  }
+  showInput()
 
     </script>
 </body>
